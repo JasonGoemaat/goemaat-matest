@@ -1,0 +1,12 @@
+{
+  "hosting": [
+    {
+      "target": "public",
+      "public": "public-site/build"
+    },
+    {
+      "target": "admin",
+      "public": "admin-site/build"
+    }
+  ]
+}

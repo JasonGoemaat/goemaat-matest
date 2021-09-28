@@ -1,0 +1,6 @@
+[submodule "admin-site"]
+	path = admin-site
+	url = git@github.com:JasonGoemaat/goemaat-matest-admin.git
+[submodule "public-site"]
+	path = public-site
+	url = git@github.com:JasonGoemaat/goemaat-matest-public.git
