@@ -62,3 +62,14 @@ This setup emulators for hosting, firestore, and pubsub
 Here I just accepted the default location of na-central-5
 
 ## I ran 'firebase init firestore'
+
+# Authentication
+
+I went to the firebase console for my project and clicked 'Authentication' and 'Get Started'
+
+I added 'google' type and selected my email as project support email, then clicked 'save'
+
+I also added Email/Password and enabled it with Email link (passwordless sign-in).
+
+Following this: https://firebase.google.com/docs/auth/web/email-link-auth?authuser=0
+

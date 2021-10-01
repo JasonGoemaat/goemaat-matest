@@ -12,6 +12,18 @@
 </head>
 <body>
   <h1>Simple</h1>
+
+  <section id="whenSignedOut">
+    <button id="signInBtn">Sign in with Google</button>
+  </section>
+
+  <section id="whenSignedIn" hidden="true">
+    <div id="userDetails"></div>
+    <button id="signOutBtn">Sign Out</button>
+  </section>
+
+
+
   
   <script type="module">
     // Import the functions you need from the SDKs you need
@@ -20,6 +32,7 @@
     // https://firebase.google.com/docs/web/setup#available-libraries
     import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-auth.js";
     import { getFirestore } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js";
+    import { myApp } from "./app.js";
   
     // Your web app's Firebase configuration
     const firebaseConfig = {
@@ -33,10 +46,13 @@
   
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
-    const auth = getAuth();
-    console.log('app:', app);
-    console.log('auth:', auth);
+    // const auth = getAuth();
+    // console.log('app:', app);
+    // console.log('auth:', auth);
+
+    console.log('myApp:', myApp);
+    myApp(app, getAuth)
+    console.log('called myApp!');
   </script>
-  <script src="app.js" defer></script>
 </body>
 </html>
