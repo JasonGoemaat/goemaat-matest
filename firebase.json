@@ -1,6 +1,10 @@
 {
   "hosting": [
     {
+      "target": "simple",
+      "public": "simple/public"
+    },
+    {
       "target": "public",
       "public": "public-site/build"
     },
