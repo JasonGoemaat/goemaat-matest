@@ -50,3 +50,15 @@ firebase target:apply hosting simple goemaat-ma-simple
     Hosting URL: https://goemaat-multiple-apps.firebaseapp.com
     Hosting URL: https://goemaat-ma-admin-area.firebaseapp.com
 
+
+## I ran 'firebase init emulators'
+
+This setup emulators for hosting, firestore, and pubsub
+
+## I added Firebase Explorer extension to vscode
+
+## I added 'Firestore Database' in the firebase console
+
+Here I just accepted the default location of na-central-5
+
+## I ran 'firebase init firestore'
