@@ -9,6 +9,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
+
+  <!-- for generating fake random names and such -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/0.5.12/MinFaker.js" integrity="sha512-+qHsuYJbatsUfmvRdKj5xyKJO1othF3ZeK/X6ap2pNJrHYtSdrNmZFTisz79wr+ddh1XIJs3EpsISWYkJEguwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
   <h1>Simple</h1>
@@ -20,6 +23,15 @@
   <section id="whenSignedIn" hidden="true">
     <div id="userDetails"></div>
     <button id="signOutBtn">Sign Out</button>
+  </section>
+
+  <section>
+    <h4>Things:</h4>
+    <ul id="thingsList">
+
+    </ul>
+
+    <button id="createThing">Create Random Thing</button>
   </section>
 
 
