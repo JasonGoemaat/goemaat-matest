@@ -1,8 +1,27 @@
 rules_version = '2';
+
+// see: https://firebase.google.com/docs/firestore/security/rules-conditions
+
 service cloud.firestore {
   match /databases/{database}/documents {
     match /{document=**} {
       allow read, write: if false;
+    }
+    
+    // admin, I can do anything I want!
+    match /{document=**} {
+      allow read, write: if request.auth.uid == 'zt51B844H3W90zF4FBOb7K6fQGw2';
+    }
+    
+    // /users is special, any user can access their own documents
+    match /users/{userId} {
+      allow read, update, delete: if request.auth != null && request.auth.uid == userId;
+      allow create : if request.auth != null;
+    }
+
+    // Each user has 'public' area where they can update and delete, but anyone can read
+    match /users/{userId}/public {
+      allow read: if request.auth != null;
     }
   }
 }
