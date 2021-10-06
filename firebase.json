@@ -11,6 +11,10 @@
     {
       "target": "admin",
       "public": "admin-site/build"
+    },
+    {
+      "target": "tournament",
+      "public": "tournament/dist/tournament"
     }
   ],
   "emulators": {
@@ -22,6 +26,10 @@
     },
     "pubsub": {
       "port": 8085
+    },
+    "ui": {
+      "port": "4000",
+      "enabled": true
     }
   },
   "firestore": {

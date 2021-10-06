@@ -4,3 +4,6 @@
 [submodule "public-site"]
 	path = public-site
 	url = git@github.com:JasonGoemaat/goemaat-matest-public.git
+[submodule "tournament"]
+	path = tournament
+	url = git@github.com:JasonGoemaat/goemaat-matest-tournament.git

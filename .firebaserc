@@ -13,6 +13,9 @@
         ],
         "simple": [
           "goemaat-ma-simple"
+        ],
+        "tournament": [
+          "goemaat-ma-tournament"
         ]
       }
     }

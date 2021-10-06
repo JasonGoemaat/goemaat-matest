@@ -1,6 +1,8 @@
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-auth.js";
-import { getFirestore, addDoc, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js";
+import { getFirestore, addDoc, collection, getDocs, connectFirestoreEmulator } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js";
+
 import { initAppFirestore } from './app-firestore.js';
+
 
 console.log('loading module app.js');
 

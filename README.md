@@ -54,5 +54,7 @@ I created in the firebase console under hosting for the project:
 ```
 firebase target:apply hosting admin goemaat-ma-admin-area
 firebase target:apply hosting public goemaat-multiple-apps
+
+firebase target:apply hosting tournament goemaat-ma-tournament
 ```
 
