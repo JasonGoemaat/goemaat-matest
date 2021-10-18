@@ -18,6 +18,9 @@
     }
   ],
   "emulators": {
+    "auth": {
+      "port": 9099
+    },
     "firestore": {
       "port": 8080
     },
@@ -25,10 +28,10 @@
       "port": 5000
     },
     "pubsub": {
-      "port": 8085
+      "port": "8085"
     },
     "ui": {
-      "port": "4000",
+      "port": 4000,
       "enabled": true
     }
   },

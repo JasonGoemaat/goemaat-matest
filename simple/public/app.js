@@ -1,5 +1,6 @@
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-auth.js";
-import { getFirestore, addDoc, collection, getDocs, connectFirestoreEmulator } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js";
+import { getFirestore, addDoc, collection, getDocs, } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js";
+import { getDatabase, ref, update } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-database.js";;
 
 import { initAppFirestore } from './app-firestore.js';
 
@@ -46,6 +47,28 @@ let myApp = function(app) {
   const db = getFirestore();
   window['db'] = db;
   window['fs'] = { addDoc, collection, getDocs };
+  
+  // helper to display promise result or error
+  window['d'] = (promise) => {
+    promise.then(x => console.log(x)).catch(err => console.error(err));
+  };
+
+  console.log('Samples:');
+
+  // helper to display collection data
+  console.log(`  dcol('tournaments')`);
+  window['dcol'] = (collectionPath) => {
+    var c = collection(db, collectionPath);
+    var promise = getDocs(c);
+    var items = promise.then(snapshot => snapshot.docs.map(doc => doc.data()));
+    window['d'](items)
+  }
+
+  // helper to update data
+  window['dupdate'] = (path, data) => {
+    window['d'](update(ref(getDatabase()), { [path]: data }));
+  }
+
   for (let key in window['fs']) {
     window[key] = window['fs'][key];
   }

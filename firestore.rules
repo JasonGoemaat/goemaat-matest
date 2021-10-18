@@ -11,7 +11,7 @@ service cloud.firestore {
     
     // admin, I can do anything I want!
     match /{document=**} {
-      allow read, write: if request.auth.uid == 'zt51B844H3W90zF4FBOb7K6fQGw2';
+      allow read, write: if request.auth.uid == 'zt51B844H3W90zF4FBOb7K6fQGw2' || request.auth.uid == '0Smac4dSLPbOfIJUAzEEHnMqcuC3';
     }
     
     // /users is special, any user can access their own documents
