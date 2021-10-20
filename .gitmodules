@@ -7,3 +7,6 @@
 [submodule "tournament"]
 	path = tournament
 	url = git@github.com:JasonGoemaat/goemaat-matest-tournament.git
+[submodule "firebase-tournament-test"]
+	path = firebase-tournament-test
+	url = https://github.com/JasonGoemaat/firebase-tournament-test
