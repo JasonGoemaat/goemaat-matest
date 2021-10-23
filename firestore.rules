@@ -11,7 +11,7 @@ service cloud.firestore {
     
     // admin, I can do anything I want!
     match /{document=**} {
-      allow read, write: if request.auth.uid == 'zt51B844H3W90zF4FBOb7K6fQGw2' || request.auth.uid == '0Smac4dSLPbOfIJUAzEEHnMqcuC3';
+      allow read, write: if request.auth.uid == 'zt51B844H3W90zF4FBOb7K6fQGw2' || request.auth.uid == '0Smac4dSLPbOfIJUAzEEHnMqcuC3' || request.auth.uid == 'XTdoxcR4AIb1VTDLwj9JcsdFo9k1';
     }
     
     // /users is special, any user can access their own documents
@@ -34,6 +34,7 @@ service cloud.firestore {
 
     match /tournaments/{docId} {
       allow read: if true;
+      allow write: if request.resource.auth && (request.resource.auth.token.role == 'owner' || request.resource.auth.token.role == 'admin')
     }
   }
 }

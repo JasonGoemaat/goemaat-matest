@@ -15,6 +15,9 @@
           "goemaat-ma-simple"
         ],
         "tournament": [
+          "firebase-tournament-test"
+        ],
+        "rosatournament": [
           "goemaat-ma-tournament"
         ]
       }

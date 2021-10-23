@@ -13,8 +13,12 @@
       "public": "admin-site/build"
     },
     {
-      "target": "tournament",
+      "target": "rosatournament",
       "public": "tournament/dist/tournament"
+    },
+    {
+      "target": "tournament",
+      "public": "firebase-tournament-test/dist/firebase-tournament-test"
     }
   ],
   "emulators": {
