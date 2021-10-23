@@ -5,7 +5,7 @@
 	path = public-site
 	url = git@github.com:JasonGoemaat/goemaat-matest-public.git
 [submodule "tournament"]
-	path = tournament
+	path = rosatournament
 	url = git@github.com:JasonGoemaat/goemaat-matest-tournament.git
 [submodule "firebase-tournament-test"]
 	path = firebase-tournament-test
