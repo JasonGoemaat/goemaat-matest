@@ -33,8 +33,26 @@ service cloud.firestore {
     }
 
     match /tournaments/{docId} {
+      function isSignedIn() {
+        return request.auth != null;
+      }
+
+      function getRole(rsc) {
+        // Read from the "roles" map in the resource (rsc).
+        return rsc.data.roles[request.auth.uid];
+      }
+
+      function isOneOfRoles(rsc, array) {
+        // Determine if the user is one of an array of roles
+        return isSignedIn() && (getRole(rsc) in array);
+      }
+      
+      function isValidNewTournament() {
+      	return resource == null && isOneOfRoles(request.resource, ['owner']);
+      }
+
       allow read: if true;
-      allow write: if request.resource.auth && (request.resource.auth.token.role == 'owner' || request.resource.auth.token.role == 'admin')
+      allow write: if isOneOfRoles(resource, ['admin', 'owner'])
     }
   }
 }
